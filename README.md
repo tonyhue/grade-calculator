@@ -42,7 +42,7 @@ Two values are needed for each grade entry:
 
 ## Notes
 
-* app.min.js is compiled and minified using Codekit. It combines 
+* app.min.js is compiled and minified using Codekit. It prepends jquery.js and functions.js to app.js.
 
 ## Changelog
 
