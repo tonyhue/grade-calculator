@@ -1,5 +1,4 @@
 // @codekit-prepend "jquery.js";
-// @codekit-prepend "alert.js";
 // @codekit-prepend "functions.js";
 
 //============================================

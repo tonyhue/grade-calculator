@@ -130,7 +130,8 @@ if($_POST)
 
   <link rel="stylesheet" href="css/style.css">
 
- <?php 
+ <?php
+ 	// Include Google Analytics snippet for production
  	$serverCheck = htmlentities($_SERVER['SERVER_NAME']);
  	if($serverCheck !== "localhost")
  	{

@@ -1,20 +1,20 @@
-# MyGrades - Grade Calculate
+# MyGrades - Grade Calculator
 
-MyGrades lets you easily calculate the grade you have in a class. It requires manually entering each assignment/quiz/presentation/test in a class to determine the current or overall grade. 
-
-Two values are needed: 
-
-* the score received for the item
-* the percentage value of it
+[MyGrades](http://labs.tonyhue.com/grade-calculator/) lets you easily calculate the grade you have in a class. Simply enter the scores you received on assignments, projects, presentations, and exams in a class and MyGrades will determine your current or final grade.
 
 ## Formula
 
-[(Score received x Weight (convert to decimal)) + (...)] / [Total weight]
+Two values are needed for each grade entry: 
+
+* score
+* weight percentage
+
+[(Score-1 x Weight-1) + (Score-2 x Weight-2) + (...)] / Total weight
 
 ### Example:
-* Project: 85 pts, 10% weight
-* Homework: 100 pts, 10% weight
-* Midterm 1: 70 pts, 25% weight
+* Project: 85%, 10% weight
+* Homework: 100%, 10% weight
+* Midterm 1: 70%, 25% weight
 
 [(85 x 0.10) + (100 x 0.10) + (70 x 0.25)] / 45
 	= (8.5 + 10 + 17.5) / 45
@@ -36,6 +36,13 @@ Two values are needed:
 * Show example
 	* Clickable link/button which prefills form and shows the correct input type
 * support for extra credit, eg. scores above 100
+
+## Screenshot
+![ScreenShot](/img/screenshot.png)
+
+## Notes
+
+* app.min.js is compiled and minified using Codekit. It combines 
 
 ## Changelog
 
@@ -79,13 +86,13 @@ Two values are needed:
 
 * Allow user to adjust grading scale. Example: Anything greater than 88 is an A.
 * Support browsers with JS disabled.
-* Explore the possibility of using jQuery 2.x which allows you to load parts of the entire library. Performance benefits.
+* Explore the possibility of using jQuery 2.x which allows you to load parts of the entire library.
 
 ## Colophon:
 
 * [Bootstrap 3](http://getbootstrap.com/)
 * [jQuery 1.11](http://jquery.com/)
-* [SASS](http://sass-lang.com/)
+* [Sass](http://sass-lang.com/)
 * [Codekit](http://incident57.com/codekit/)
 
 
