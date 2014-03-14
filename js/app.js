@@ -1,4 +1,4 @@
-// @codekit-prepend "jquery.js";
+// @codekit-prepend "../bower_components/jquery/dist/jquery.js";
 // @codekit-prepend "functions.js";
 
 //============================================
@@ -56,8 +56,8 @@ $('#gradeActions').on('click', '.calculate', function(){
 		var weightVal = $('input[name="w' + i + '"]').val();
 
 		// debugging
-		var checkScore  = typeof scoreVal;
-		var checkWeight = typeof weightVal;
+		// var checkScore  = typeof scoreVal;
+		// var checkWeight = typeof weightVal;
 
 		// if both a score and weight provided for a given row
 		if(scoreVal && weightVal)
@@ -137,8 +137,3 @@ $('#gradeActions').on('click', '.calculate', function(){
 	return false;
 
 });
-
-
-
-
-

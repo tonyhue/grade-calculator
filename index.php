@@ -138,7 +138,6 @@ if($_POST)
  		include("../includes/analytics.php"); 
  	}
  ?>
- 
 </head>
 <body>
 	
@@ -226,7 +225,7 @@ if($_POST)
 		</div>
 	</div><!--END .container-->
 
-	<script type="text/javascript" src="js/app.min.js"></script>
+	<script type="text/javascript" src="js/app-ck.js"></script>
 
 </body>
 </html>
