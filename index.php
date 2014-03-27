@@ -79,7 +79,7 @@ weighted percentage of the final grade.
 
 			<div class="col-md-8">
 
-				<form action="<?php echo $self; ?>" method="POST">
+				<form role="form" name="MyGrades">
 
 					<table id="scores" class="table table-hover">
 						<thead>
@@ -91,34 +91,42 @@ weighted percentage of the final grade.
 						<tbody>
 							<tr>
 								<td>
-									<input class="form-control" type="number" name="s1" value="">
+									<label for="s1" class="sr-only"></label>
+									<input class="form-control" type="number" name="s1" id="s1" maxlength="3" step="0.01" min="0">
 								</td>
 								<td>
-									<input class="form-control" type="number" name="w1" value="">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input class="form-control" type="number" name="s2" value="">
-								</td>
-								<td>
-									<input class="form-control" type="number" name="w2" value="">
+									<label for="w1" class="sr-only"></label>
+									<input class="form-control" type="number" name="w1" id="w1" step="0.01" min="0">
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input class="form-control" type="number" name="s3" value="">
+									<label for="s2" class="sr-only"></label>
+									<input class="form-control" type="number" name="s2" id="s2" step="0.01" min="0">
 								</td>
 								<td>
-									<input class="form-control" type="number" name="w3" value="">
+									<label for="w2" class="sr-only"></label>
+									<input class="form-control" type="number" name="w2" id="w2" step="0.01" min="0">
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input class="form-control" type="number" name="s4" value="">
+									<label for="s3" class="sr-only"></label>
+									<input class="form-control" type="number" name="s3" id="s3" step="0.01" min="0">
 								</td>
 								<td>
-									<input class="form-control" type="number" name="w4" value="">
+									<label for="w3" class="sr-only"></label>
+									<input class="form-control" type="number" name="w3" id="w3" step="0.01" min="0">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="s4" class="sr-only"></label>
+									<input class="form-control" type="number" name="s4" id="s4" step="0.01" min="0">
+								</td>
+								<td>
+									<label for="w4" class="sr-only"></label>
+									<input class="form-control" type="number" name="w4" id="s4" step="0.01" min="0">
 								</td>
 							</tr>
 						</tbody>

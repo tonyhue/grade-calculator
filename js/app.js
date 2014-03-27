@@ -29,7 +29,7 @@ $('#gradeActions').on('click', '.clear-score', function(){
 
 $('#gradeActions').on('click', '.add-score', function(){
 	var scoreCount = $('#scores tr').length;
-	$('tbody').append('<tr><td><input class="form-control" type="number" name="s' + scoreCount + '" value=""></td><td><input class="form-control" type="number" name="w' + scoreCount + '" value=""></td></tr>');
+	$('tbody').append('<tr><td><label name="s' + scoreCount + '" class="sr-only"></label><input class="form-control" type="number" name="s' + scoreCount + '" id="s' + scoreCount + '" step="0.01" min="0"></td><td><label name="w' + scoreCount + '" class="sr-only"></label><input class="form-control" type="number" name="w' + scoreCount + '" id="w' + scoreCount + '" step="0.01" min="0"></td></tr>');
 	return false;
 });
 
@@ -40,40 +40,55 @@ $('#gradeActions').on('click', '.add-score', function(){
 
 $('#gradeActions').on('click', '.calculate', function(){
 
-	// determine the number of grades submitted.
-	var scoreCount = $('#scores tr').length; // BUG: how to grab # of filled rows?
-	// set vars
 	var cumulativePoints = 0;
 	var cumulativeWeight = 0;
 	var currentGrade = 0;
 
+	// determine the number of grades submitted.
+	// BUG: how to grab # of filled rows?
+	var scoreCount = $('#scores tbody tr').length;
+
 	// loop through each entry, multiplying each score with
 	// its corresponding weight. add value to running point total
-	for(var i = 1; i < scoreCount; i++)
+	for(var i = 1; i <= scoreCount; i++)
 	{
 		// Retrieve entry values
-		// note: val() doesn't work with input of type number
+		// note: val() always seems to return a string. why not a number?
 		var scoreVal  = $('input[name="s' + i + '"]').val();
 		var weightVal = $('input[name="w' + i + '"]').val();
 
 		// debugging
 		// var checkScore  = typeof scoreVal;
 		// var checkWeight = typeof weightVal;
+		console.log(i + " " + scoreVal + " " + weightVal);
+		
+		var scoreType = typeof scoreVal;
+		var weightType = typeof weightVal;
+
+		console.log("type of scoreVal: " + scoreType);
+		console.log("type of weightVal: " + weightType);
 
 		// if both a score and weight provided for a given row
 		if(scoreVal && weightVal)
 		{
 			// convert to integer
-			// note: parseInt converts "10d" to 10, but returns NaN for "d10"
-			scoreVal = parseInt(scoreVal, 10);
-			weightVal = parseInt(weightVal, 10) / 100; // save the need to convert later on
+			scoreVal  = parseFloat(scoreVal, 10);
+			weightVal = parseFloat(weightVal, 10) / 100; // save the need to convert later on
+			console.log(i + " (inside) " + scoreVal + " " + weightVal);
+			
+			scoreType = typeof scoreVal;
+			weightType = typeof weightVal;
 
+			console.log("type of scoreVal: " + scoreType);
+			console.log("type of weightVal: " + weightType);
+		
 			// Report error if non-number found
 			if(isNaN(scoreVal) || isNaN(weightVal))
 			{
+				console.log("problem sir");
 				$('.alert-danger').remove();
 				$('#results, #performance').empty().removeClass();
-				$("<div class='alert alert-danger alert-dismissable'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>Please enter a number value.</div>").insertBefore('#results');
+				$("<div class='alert alert-danger alert-dismissable'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>Please enter either a whole number or decimal number value.</div>").insertBefore('#results');
 				return false;
 			}
 			else
@@ -96,7 +111,8 @@ $('#gradeActions').on('click', '.calculate', function(){
 			}
 			// alert(currentGrade);
 		}
-	}
+	} // finished going through grade entries
+
 	// remove any pre-existing error message, if any
 	$('.alert-danger').remove();
 
