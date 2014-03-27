@@ -1,0 +1,176 @@
+<h1>MyGrades - Grade Calculator</h1>
+
+<p><a href="http://labs.tonyhue.com/grade-calculator/">MyGrades</a> lets you easily calculate the grade you have in a class. Simply enter the scores you received on assignments, projects, presentations, and exams in a class and MyGrades will determine your current or final grade.</p>
+
+<h2>Formula</h2>
+
+<p>Two values are needed for each grade entry:</p>
+
+<ul>
+<li>score</li>
+<li>weight percentage</li>
+</ul>
+
+
+<p>[(Score_1 x Weight_1) + (Score_2 x Weight_2) + (&hellip;)] / Total weight</p>
+
+<h3>Example:</h3>
+
+<ul>
+<li>Project: 85%, 10% weight</li>
+<li>Homework: 100%, 10% weight</li>
+<li>Midterm 1: 70%, 25% weight</li>
+</ul>
+
+
+<p>[(85 x 0.10) + (100 x 0.10) + (70 x 0.25)] / 45
+    = (8.5 + 10 + 17.5) / 45
+    = 36 / 45
+    = 0.80 or 80%</p>
+
+<h2>Features</h2>
+
+<ul>
+<li>Error handling
+
+<ul>
+<li>check sum of percent total</li>
+<li>scores cannot exceed 100</li>
+<li>score/weight must go in pairs</li>
+</ul>
+</li>
+<li>Preserve score/weight input upon form submission
+
+<ul>
+<li>clear form button</li>
+</ul>
+</li>
+<li>Support for current grade in class
+
+<ul>
+<li>assumption: some grades recorded, class not complete yet</li>
+<li>determine score required in remainder of class to secure certain grade</li>
+<li>if total weight is less than 100, adjust score</li>
+</ul>
+</li>
+<li>Show example
+
+<ul>
+<li>Clickable link/button which prefills form and shows the correct input type</li>
+</ul>
+</li>
+<li>support for extra credit, eg. scores above 100</li>
+</ul>
+
+
+<h2>Screenshot</h2>
+
+<p><img src="/img/screenshot.png" alt="ScreenShot" /></p>
+
+<h2>Notes</h2>
+
+<ul>
+<li>app.min.js is compiled and minified using Codekit. It prepends jquery.js and functions.js to app.js.</li>
+</ul>
+
+
+<h2>Changelog</h2>
+
+<h3>1.1</h3>
+
+<ul>
+<li>Added ability to add as many scores to your class</li>
+</ul>
+
+
+<h3>1.2</h3>
+
+<ul>
+<li>Popup alert when submitting non-integer values (highlight offending fields)</li>
+<li>Added notice saying what the cumulative weight of their current grade thus far</li>
+<li>Added notice if total weight exceeds 100</li>
+<li>Eliminated &ldquo;Bootstrap&rdquo; look and feel</li>
+<li>Added <meta> tags</li>
+<li>Added facebook meta tags</li>
+</ul>
+
+
+<h3>1.3</h3>
+
+<ul>
+<li>Clicking clear button now doesn&rsquo;t reload page.
+
+<ul>
+<li>Clear removes entered input fields and results/performance boxes</li>
+</ul>
+</li>
+<li>Migrated to Bootstrap 3
+
+<ul>
+<li>importing framework via Codekit</li>
+<li>@import in style.scss</li>
+<li>// @codekit-append/prepend in app.js</li>
+<li>updated grid and button classes to newer version</li>
+</ul>
+</li>
+<li>Changed custom.js to app.js
+
+<ul>
+<li>Concatenating jquery, tooltip.js, popover.js to app.js</li>
+<li>Bootstrap requires jQuery</li>
+<li>Minifying to app.min.js</li>
+</ul>
+</li>
+<li>Using Glyphicon for &ldquo;add new score&rdquo; button
+
+<ul>
+<li>Moved font files to project folder since Codekit does not import font files via frameworks.</li>
+</ul>
+</li>
+<li>Design refinements
+
+<ul>
+<li>input fields scale better at smaller dimensions now. no more horizontal scrolling!</li>
+</ul>
+</li>
+<li>Replaced pop-up error alert with inline alert box
+
+<ul>
+<li>Current limitation: reports only first instance of error it finds and stops validating rest of form. Might need to use a plugin.</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>1.3.1</h3>
+
+<ul>
+<li>Bug fixes with form validation handling. val() doesn&rsquo;t grab the value of input type number. Reverted back to type text for the time being.</li>
+</ul>
+
+
+<h3>1.3.2</h3>
+
+<ul>
+<li>jQuery selector optimization</li>
+</ul>
+
+
+<h2>TODO</h2>
+
+<ul>
+<li>Allow user to adjust grading scale. Example: Anything greater than 88 is an A.</li>
+<li>Support browsers with JS disabled.</li>
+<li>Explore the possibility of using jQuery 2.x which allows you to load parts of the entire library.</li>
+</ul>
+
+
+<h2>Colophon:</h2>
+
+<ul>
+<li><a href="http://getbootstrap.com/">Bootstrap 3</a></li>
+<li><a href="http://jquery.com/">jQuery 1.11</a></li>
+<li><a href="http://sass-lang.com/">Sass</a></li>
+<li><a href="http://incident57.com/codekit/">Codekit</a></li>
+</ul>
+

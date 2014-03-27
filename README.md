@@ -9,7 +9,7 @@ Two values are needed for each grade entry:
 * score
 * weight percentage
 
-[(Score-1 x Weight-1) + (Score-2 x Weight-2) + (...)] / Total weight
+[(Score_1 x Weight_1) + (Score_2 x Weight_2) + (...)] / Total weight
 
 ### Example:
 * Project: 85%, 10% weight
