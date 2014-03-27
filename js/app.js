@@ -1,5 +1,6 @@
 // @codekit-prepend "../bower_components/jquery/dist/jquery.js";
 // @codekit-prepend "functions.js";
+// @codekit-prepend "../bower_components/bootstrap/js/alert.js"
 
 //============================================
 // Notes

@@ -1,0 +1,41 @@
+/*@import "../bower_components/bootstrap/less/bootstrap.less";*/
+// Core variables and mixins
+@import "../bower_components/bootstrap/less/variables.less";
+@import "../bower_components/bootstrap/less/mixins.less";
+// Reset
+@import "../bower_components/bootstrap/less/normalize.less";
+// Core CSS
+@import "../bower_components/bootstrap/less/scaffolding.less";
+@import "../bower_components/bootstrap/less/type.less";
+@import "../bower_components/bootstrap/less/grid.less";
+@import "../bower_components/bootstrap/less/tables.less";
+@import "../bower_components/bootstrap/less/theme.less";
+@import "../bower_components/bootstrap/less/forms.less";
+@import "../bower_components/bootstrap/less/buttons.less";
+// Components
+@import "../bower_components/bootstrap/less/glyphicons.less";
+@import "../bower_components/bootstrap/less/alerts.less";
+
+// Utility Classes
+@import "../bower_components/bootstrap/less/utilities.less";
+
+.app-name {
+	color: darken(@brand-primary, 15%);
+}
+#scores {
+	position: relative;
+}
+input[type=number] {
+	text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+th {
+	text-align: center;
+}
+form {
+	margin-bottom: 20px;
+}

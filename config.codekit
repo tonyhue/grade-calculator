@@ -1,10 +1,20 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "16828",
+"creatorBuild": "16877",
 "files": {
+	"\/app.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app.min.js",
+		"outputAbbreviatedPath": "\/app.min.min.js",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower_components\/bootstrap\/dist\/css\/bootstrap-theme.css": {
 		"fileType": 16,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/css\/bootstrap-theme.css",
 		"outputAbbreviatedPath": "No Output Path",
@@ -20,7 +30,7 @@
 		},
 	"\/bower_components\/bootstrap\/dist\/css\/bootstrap.css": {
 		"fileType": 16,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/css\/bootstrap.css",
 		"outputAbbreviatedPath": "No Output Path",
@@ -116,7 +126,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/alert.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/alert.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/alert-ck.js",
@@ -857,7 +867,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/less\/theme.less",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/css\/theme.css",
@@ -1900,24 +1910,24 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
-	"\/js\/app-ck.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/app-ck.js",
-		"outputAbbreviatedPath": "\/js\/app-ck.min.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/app.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/app.js",
-		"outputAbbreviatedPath": "\/js\/app-ck.js",
-		"outputPathIsSetByUser": 0,
+		"outputAbbreviatedPath": "\/js\/app.min.js",
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/app.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/app.min.js",
+		"outputAbbreviatedPath": "\/js\/app.min.min.js",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/functions.js": {
@@ -1929,6 +1939,25 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/less\/style.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/style.less",
+		"outputAbbreviatedPath": "\/css\/style.css",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
 		},
 	"\/README.md": {
 		"enableFootnoteSupport": 0,
