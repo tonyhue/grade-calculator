@@ -1,8 +1,4 @@
-<?php
-
-include("functions.php");
-
-/*
+<!-- 
 
 //============================================
 // Description
@@ -12,11 +8,9 @@ in a class. It requires manually entering each
 assignment/quiz/presentation/test that contributed 
 to a class's overall grade. Two values are needed:
 the score received for a graded item and its 
-weighted percentage of the final grade. 
+weighted percentage of the final grade.  
 
-*/
-
-?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,14 +32,7 @@ weighted percentage of the final grade.
 
 	<link rel="stylesheet" href="css/style.css">
 
-	<?php
- 	// Include Google Analytics snippet for production
-	$serverCheck = htmlentities($_SERVER['SERVER_NAME']);
-	if($serverCheck !== "localhost")
-	{
-		include("../includes/analytics.php"); 
-	}
-	?>
+	<script src="javascripts/analytics.js"></script>
 </head>
 <body>
 	
